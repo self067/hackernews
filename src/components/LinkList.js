@@ -11,7 +11,7 @@ export const FEED_QUERY = gql`
     $orderBy: LinkOrderByInput
   ) {
     feed(take: $take, skip: $skip, orderBy: $orderBy) {
-      id
+      
       links {
         id
         url
@@ -26,7 +26,7 @@ export const FEED_QUERY = gql`
             id
           }
         }
-        createdAt
+        createdAt 
       }
       count
     }

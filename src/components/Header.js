@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { AUTH_TOKEN } from '../constants';
 
 const Header = () => {
   const history = useHistory();
-  const authToken = localStorage.getItem(AUTH_TOKEN);
+  const [authToken, setAuthToken] = useState(localStorage.getItem(AUTH_TOKEN));
+//  const authToken = localStorage.getItem(AUTH_TOKEN);
+  console.log('auth=', authToken);
   return (
     <div className="flex pa1 justify-between nowrap orange">
       <div className="flex flex-fixed black">
